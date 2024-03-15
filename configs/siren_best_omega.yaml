@@ -1,0 +1,16 @@
+defaults:
+  - base.yaml
+  - siren_base.yaml
+
+training_type: best
+
+model:
+  param_grid:
+    omega_0: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]
+    beta_values: [1]
+    weight_constant: [6,]
+
+spectrum:
+  eval_before_training: false
+  crop_sizes: [64, 128]
+  selection_methods: ["cropped_64"]

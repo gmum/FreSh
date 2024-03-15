@@ -1,0 +1,16 @@
+defaults:
+  - base.yaml
+
+optimizer:
+  learning_rate: 0.001
+
+
+model:
+  type: wire
+  omega_0: 20
+  scale: 10
+  hidden_omega: 10
+
+  param_grid: # modifications to the baseline model
+    omega_0: [10,]
+    scale: [10,]

@@ -1,0 +1,31 @@
+name: fresh
+
+channels:
+  - conda-forge
+  - nvidia
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11.8
+  - lightning=2.2.1
+  - pytorch=2.2.2
+  - torchvision=0.17.2
+  - torchaudio
+  - pytorch-cuda=11.8
+  - torchmetrics
+  - matplotlib
+  - tqdm
+  - pandas
+  - scikit-learn
+  - scikit-image
+  - scikit-image[optional]
+  - jupyter
+  - pillow
+  - black
+  - wandb
+  - omegaconf
+  - sortedcontainers
+  - scikit-video
+  - configargparse
+  - opencv
+  - imageio-ffmpeg

@@ -1,0 +1,42 @@
+seed: 0
+accelerator: gpu
+
+# one - train the baseline
+# all - grid search
+# best - use FreSh to select the best configuration and train it
+training_type: one
+
+epochs: 15000
+batch_size: 600000
+checkpoints_frequency: 100
+
+optimizer:
+  learning_rate: 1e-4
+
+model:
+  type: !!null
+  hidden_features: 256
+  hidden_layers: 3
+
+dataset:
+  name: ???
+  path: ???
+
+spectrum:
+  use_baseline: true
+  eval_before_training: true
+  resize_before_crop: false
+  resize_sizes: [] # Alternative to cropping, not used
+  crop_sizes: [32, 64, 128, 256, 0.5, 0.25]
+  selection_methods: [] # Spectrum calculation (cropping) methods used for FreSh
+  initial_evals: 10 # How many times to calculate the Wasserstein distance?
+
+fast_dev_run: false
+
+checkpoints_path: "."
+results_path: "."
+
+logger:
+  group: !!null # wandb group
+  save_dir: "." # wandb save dir
+  val_check_interval: 500

@@ -1,0 +1,12 @@
+defaults:
+  - base.yaml
+
+optimizer:
+  learning_rate: 0.003
+
+model:
+  type: relu
+  sigma: 1
+
+  param_grid: # modifications to the baseline model
+    sigma: [1,]

@@ -1,0 +1,19 @@
+defaults:
+  - base.yaml
+
+optimizer:
+  learning_rate: 0.0001
+
+model:
+  type: siren
+  weight_constant: 6 # Controls scale of hidden weights
+  beta: 1 # Parametrises weight distribution in the first layer
+  omega_0: 30
+  apply_omega_when_linear: True # Gradient boosting is applied even when sine activation is not used
+  boost_bias: False # Following model description in "Implicit Neural Representations with Periodic Activation Functions"
+
+  param_grid: # modifications to the baseline model
+    omega_0: [30,]
+    beta_values: [1,]
+    weight_constant: [6,]
+
